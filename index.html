@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NingMeng123的个人主页</title>
+    <style>
+      /* 音乐播放器样式 */
+      #xf-MusicPlayer {
+        position: fixed !important;
+        bottom: auto !important;
+        right: 20px !important;
+        top: 80px !important;
+        width: 320px !important;
+        z-index: 1000 !important;
+      }
+
+      @media (max-width: 768px) {
+        #xf-MusicPlayer {
+          width: 280px !important;
+          right: 10px !important;
+          top: 70px !important;
+        }
+      }
+
+      /* 暗色主题适配 */
+      :root[data-theme="dark"] #xf-MusicPlayer {
+        --xf-player-background: var(--card-background) !important;
+        --xf-player-text-color: var(--text-color) !important;
+        --xf-player-border-color: var(--border-color) !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+    <script src="./xf-MusicPlayer.min.js"></script>
+    <!-- 音乐播放器配置 -->
+    <div id="xf-MusicPlayer" 
+         data-cdnName="https://player.xfyun.club/js"
+         data-themeColor="xf-darkGreen"
+         data-fadeOutAutoplay
+         data-memory="1"
+         data-random="true"
+         data-songChart="新歌榜">
+    </div>
+  </body>
+</html>
